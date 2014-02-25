@@ -1,0 +1,138 @@
+/* =Comments
+----------------------------------------------- */
+
+.comment-list {
+	margin: 0;
+
+	.comment {
+		margin: 2em 0 0;
+		padding: 1em;
+		border: 1px solid $medgray;
+
+		.comment-body {}
+
+		.comment-content {
+
+			a {
+				word-wrap: break-word;
+			}
+
+			p {
+				margin: 1.5em 0;
+				font-size: 1.1em;
+			}
+		}
+
+		.reply {
+			width: 5em;
+			float: right;
+			
+			@include site_button();
+		}
+
+		.children {
+			margin: 0;
+		}
+	}
+
+	.alt {}
+
+	.odd {
+
+	}
+
+	.even {
+		background-color: $lightgray;
+	}
+
+	.thread-alt {}
+	.thread-even {}
+	.thread-odd {}
+
+	li {
+		.children {
+			.alt {}
+			.odd {}
+			.even {}
+		}
+	}
+
+	.vcard {
+
+		cite.fn {
+			margin: 0 0.5em;
+			float: left;
+			font-style: normal;
+
+			a.url {}
+		}
+		.says {
+			float: left;
+		}
+
+		img.photo,
+		img.avatar {
+			border: 2px solid $budarkgray;
+			float: left;
+			width: 60px;
+		}
+
+	}
+
+	.comment-meta {
+		overflow: hidden;
+
+		a {}
+	}
+
+	.comment-metadata {
+		float: left;
+
+		a {
+			margin: 0 0.5em;
+			font-size: 0.85em;
+			text-decoration: none;
+		}
+	}
+
+	.parent {}
+	.children {}
+	.pingback {}
+
+	.bypostauthor,
+	li ul.children li.bypostauthor {
+		background-color: $budarkred;
+		color: $light;
+
+		a {
+			color: $light;
+		}
+	}
+	
+	.comment-author {}
+	.comment-author-admin {}
+
+	li {
+
+		p{}
+		ul {}
+		ul.children {
+
+			li {}
+			li.alt {}
+			li.byuser {}
+			li.comment {}
+			li.comment-author-admin {}
+		}
+	}
+}
+
+#cancel-comment-reply {
+
+	a{}
+}
+
+.comment-respond {
+	margin: 2em 0 0;
+}
+

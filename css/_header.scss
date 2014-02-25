@@ -1,0 +1,27 @@
+/* =Header
+----------------------------------------------- */
+
+.site-header {
+	padding: 0.5em;
+
+	.site-branding {
+		margin: 0 auto;
+		height: 80px;
+
+		@include imagebg ( $headerbg, "", no-repeat, center, center, contain );
+
+		.site-title {
+			@include hide();
+		}
+
+		.site-logo {
+			@include hide();
+		}
+
+		.site-description {
+			@include hide();
+		} // End of .site-description
+
+	} // End of .site-branding
+
+} // End of .site-header

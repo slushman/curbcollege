@@ -1,0 +1,211 @@
+/* =Content
+----------------------------------------------- */
+
+.site {
+	max-width: $responsive4;
+	margin: 0 auto;
+}
+
+.site-main {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1%;
+	background-color: $light;
+
+	@media only screen and (min-width: $responsive2) {
+		padding: 2%;
+	}
+}
+
+	.content-area {
+		width: 100%;
+		margin-bottom: $vspacing;
+
+		@media only screen and (min-width: $responsive3) {
+			float: left;
+			max-width: 72%;
+		}
+	}
+
+	.site-content {
+		padding: 1em;
+	}
+
+	.paging-navigation {
+		@include hide();
+	}
+
+		.post {
+			padding: 2%;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+
+		.entry-header {
+			overflow: hidden;
+			
+			.entry-title {
+				float: left;
+				margin: 0;
+				color: $budarkred;
+				font-weight: bold;
+				line-height: 1em;
+				font-family: museo_slab500;
+
+				.entry-title-link,
+				a {
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+
+			} // End of .entry-title
+
+			.entry-meta {
+				margin-left: 0.25em;					
+			}
+
+			.post-time-link {
+				text-decoration: none;
+				color: $budarkgray;
+				font-weight: bold;
+			}
+
+			.entry-date {}
+
+		} // End of .entry-header
+
+		.hentry .entry-content {
+			margin: 0;
+			color: $budarkgray;
+
+			p {
+				margin: 0 0 $lineheight;
+			}
+		}
+
+		.entry-featured-image {
+			margin: 0 auto;
+			max-width: 300px;
+
+			@media only screen and (min-width: $responsive1) {
+				float: left;
+				margin: 0 2% 0 0;
+			}
+
+		}
+
+		footer.entry-meta {
+			font-size: .85em;
+
+			.comments-link {
+				a {}
+			}
+
+			.edit-link {
+
+				@include site_button();
+				.post-edit-link {}
+			}
+
+		} // End of .entry-meta
+
+	.sticky {
+		max-width: 100% !important;
+		margin: 0 1.5% 3% !important;
+
+		.post-time-link {
+			color: $budarkred !important;
+		}
+
+		.entry-content {
+			color: $lightgray;
+
+			.entry-title {
+
+				.entry-title-link {
+					color: $light;
+				}
+
+			}
+
+			.entry-featured-image {
+				position: relative;
+
+				@media only screen and (min-width: $responsive1) {
+					float: left;
+					margin: 0 2% 0 0;
+				}
+
+			}
+
+			a {
+				color: $lightgray;
+			}
+
+		} // End of .entry-content
+
+	}
+
+	.widget-area {
+		overflow: hidden;
+		
+		@media only screen and (min-width: $responsive3) {
+			max-width: 28%;
+			padding: 0 1em;
+		}
+
+	} // End of .widget-area
+
+.byline,
+.updated {
+	@include hide();
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: $vspacing 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 $vspacing;
+}
+
+
+
+/**
+ * Home Page
+ */
+.home article {
+	background-color: $light;
+}
+
+.mybu {
+	background-color: $budarkgray;
+	box-sizing: initial;
+	padding: 0.5em;
+}
+
+/**
+ * Fullwidth Template
+ */
+.fullwidth {
+	max-width: 100%;
+}
+
+
+
+/**
+ * Pages
+ */
+.page-title {
+	font-family: museo_slab500;
+	font-weight: bolder;
+}
+
+.archive .entry-title {
+	font-size: $h2;
+}

@@ -1,0 +1,191 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $budarkgray;
+	font-family: $base-font;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+/* Headings */
+/* Headings */
+h1,
+.h1 {
+	font-size: $h1;
+
+	@include headers();
+}
+h2,
+.h2 {
+	font-size: $h2;
+
+	@include headers();
+}
+h3,
+.h3 {
+	font-size: $h3;
+
+	@include headers();
+}
+h4,
+.h4 {
+	font-size: $h4;
+
+	@include headers();
+}
+h5,
+.h5 {
+	font-size: $h5;
+
+	@include headers();
+}
+h6,
+.h6 {
+	font-size: $h6;
+
+	@include headers();
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: $vspacing;
+}
+
+/* Text elements */
+p {
+	margin-bottom: $vspacing;
+}
+ul, 
+ol {
+	margin: 0 0 $vspacing $vspacing*2;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: $vspacing;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 $vspacing $vspacing;
+}
+b, 
+strong {
+	font-weight: bold;
+}
+dfn, 
+cite, 
+em, 
+i {
+	font-style: italic;
+}
+del,
+strike {
+	color: $budarkred;
+}
+blockquote,
+q {
+	margin: 0 $vspacing;
+	quotes: "\“" "\”" "‘" "’";
+	margin-bottom: $vspacing;
+}
+blockquote:before,
+q:before {
+	content: open-quote;
+	font-size: $vspacing;
+}
+blockquote:after,
+q:after  {
+	content: close-quote;
+	font-size: $vspacing;
+}
+blockquote p,
+q p {
+	display: inline;
+}
+address {
+	margin: 0 0 $vspacing;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, 
+kbd, 
+tt, 
+var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, 
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, 
+ins {
+	background: $budarkgray;
+	text-decoration: none;
+	color: white;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 $vspacing;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+
+/* Links */
+a {
+	color: $budarkred;
+	@include hoverActiveFocus(color, $bured);
+}
+a:visited {
+	color: $budarkred;
+}

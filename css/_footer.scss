@@ -1,0 +1,72 @@
+// Footer
+// --------------------------
+
+.site-footer {
+	padding: 0.25em;
+	color: $light;
+
+ 	a {
+		color: $light;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.footer-wrap {
+		margin: auto;
+	}
+
+		.footer_left {
+
+			@media all and (min-width: $responsive2) {
+				@include column( 5, 1, 0 );
+			}
+
+			.nav-social {
+				text-align: center;
+		
+				.menu-items {
+					margin: 0;
+
+					.menu-item {
+
+						a {
+
+						}
+
+						a:before {
+							color: $light;
+						}
+
+					}
+
+				}
+			}
+		}
+
+		.site-info {
+			text-align: center;
+
+			@media all and (min-width: $responsive2) {
+				@include column( 5, 3, 0 );
+			}
+
+			.copyright {
+				line-height: 1em;
+			}
+		}
+
+		.site-credits {
+			text-align: center;
+			
+			@media all and (min-width: $responsive2) {
+				@include column( 5, 1, 0 );
+			}
+
+			.slushman {
+				line-height: 2em;
+			}
+		}
+}

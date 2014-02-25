@@ -1,0 +1,210 @@
+/* =Menu
+ *
+ * Centering the menu:
+ * http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support
+ * 
+----------------------------------------------- */
+
+.main-navigation {
+	width: 100%;
+	background-color: $budarkgray;
+	@include center();
+
+	@media screen and (min-width: $responsive1) {
+		background-color: transparent;
+		height: $menuheight;
+	}
+
+	// Small menu
+	.menu-toggle,
+	&.toggled .nav-menu {
+		display: block;
+		cursor: pointer;
+		font-size: $menuheight;
+
+		@media screen and (min-width: $responsive1) {
+			display: none;
+		}
+	}
+}
+
+.craft_navs {
+	max-width: 75em;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+
+
+.menu-default-container,
+.menu-short-container,
+.menu-testing-menu-container {
+	font-size: 1.2em;
+
+	@media screen and (min-width: $responsive4) {
+		display: inline-block;
+	}
+}
+
+	// first level
+	.nav-menu {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		display: none;
+
+		@media screen and (min-width: $responsive1) {
+			display: inherit;
+			height: $menuheight;
+			
+			@include center();
+		}
+
+		.current-menu-item,
+		.current-menu-parent,
+		.current_page_item,
+		.current-menu-ancestor {
+
+			> a {
+				color: $bulightblue !important;
+			}
+		}
+
+		.menu-item {
+			position: relative;
+
+			@media screen and (min-width: $responsive1) {
+				display: inline-block;
+			}
+
+			> a {
+				display: inherit;
+				text-decoration: none;
+				padding: 0 0.5em;
+				color: $light;
+				text-transform: uppercase;
+				line-height: 59px;
+
+				@media screen and (min-width: $responsive1) {
+					&:before {
+						content: "|";
+						margin-right: 0.6em;
+						font-size: 2em;
+						top: 0.2em;
+						position: relative;
+					}
+				}
+
+				
+
+			}
+
+			// link hover
+			&:hover {
+				> a {}
+				> ul { display: block; }
+			}
+
+			/* &:first-child a {
+
+				@media screen and (min-width: $responsive1) {
+					border-left: none;
+				}
+			} */
+
+			&:first-child a:before {
+
+				@media screen and (min-width: $responsive1) {
+					content: none;
+				}
+			}
+
+		}
+
+		// second level
+		.sub-menu  {
+			list-style: none;
+			margin: 0;
+			background-color: $budarkgray;
+			
+			@media only screen and (min-width: $responsive1) {
+				float: left;
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				display: none;
+				position: absolute;
+					top: $menuheight;
+					left: 1em;
+				z-index: 99999;
+			}
+
+			&:hover {
+				> a {};
+			}
+
+			.menu-item {
+
+				@media only screen and (min-width: $responsive1) {
+					line-height: 59px;
+				}
+
+				a {
+					width: 100%;
+
+					&:hover {};
+
+					&:before {
+						content: none;
+					}
+
+					@media only screen and (min-width: $responsive1) {
+						width: 200px;
+						line-height: 1.5em;
+					}
+				}
+			}
+
+			// third level
+			.sub-menu {
+				left: 100%;
+				top: 0;
+			}
+
+			
+		}
+
+		li:hover > ul {
+			display: block;
+		}
+	}
+
+.craft_navs .nav-social {
+	display: none;
+
+	@media only screen and (min-width: $responsive3) {
+		display: inline-block;
+		float: right;
+		max-width: 30.6%;
+	}
+	
+	.menu-items {
+		margin: 0 1em 0 0;
+		text-align: right;
+
+		.menu-item {
+			
+
+			a {
+			}
+
+			a:before {
+				color: $budarkred;
+			}
+
+		}
+
+	}
+}
+
+.menu-toggle {
+	text-align: center;
+	color: $light;
+}

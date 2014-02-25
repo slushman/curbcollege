@@ -1,0 +1,31 @@
+// Theme Mixins
+// --------------------------
+//
+
+@mixin article($color) {
+    border: 3px solid $color;
+
+    .wp-post-image {
+        border: 3px solid $budarkgray;
+    }
+}
+
+@mixin footerboxes {
+    padding: 0.5em;
+
+    @media all and (min-width: $responsive2) {
+        padding: 0;
+    }
+}
+
+@mixin site_button() {
+    text-align: center;
+    padding: 0.5em 1em;
+    background-color: $budarkgray;
+    
+    a {
+        color: $light;
+        text-decoration: none;
+        font-size: 1.25em;
+    }
+}
