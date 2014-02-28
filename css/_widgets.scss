@@ -3,9 +3,7 @@
 
 .widget {
 	margin: 0 0 $vspacing;
-	border: 2px solid $budarkgray;
-	padding: 1em;
-	background-color: $budarkgray;
+	color: $light;
 
 	/* Make sure select elements fit in widgets */
 	select {
@@ -17,6 +15,8 @@
 		line-height: 1em;
 		margin: 0.3em;
 		font-size: 1.7em;
+		text-transform: uppercase;
+		font-family: museo_slab500;
 	}
 
 	/* Search widget */
@@ -32,86 +32,31 @@
 	}
 }
 
-.slushman_upcoming_posts_widget {
+.widget_recent_entries {
+	ul {
+		list-style: none;
+		margin: 0;
 
-	.widget-title {
+		li {
+			margin-bottom: 0.75em;
 
-	}
-
-	.upcoming_post {
-		overflow: hidden;
-		font-weight: bold;
-		font-size: 1.6em;
-		text-transform: uppercase;
-		text-align: center;
-
-
-		.upcoming_image {
-
-		}
-
-		.upcoming_pic {
-			border: 2px solid $lightgray;
-		}
-
-		.upcoming_title {
-			float: left;
-			color: $light;
-			width: 48%;
-			text-align: right;
-		}
-
-		.upcoming_date {
-			float: right;
-			color: $lightgray;
-			width: 48%;
-			text-align: left;
+			a {
+				text-decoration: none;
+				color: $light;
+			}
 		}
 	}
 }
 
-.slushman_featured_posts_widget {
-	background-color: $budarkgray;
-	overflow: hidden;
-
-	.featured_posts {
-		max-width: 100%;
-		margin: 0 auto;
-
-		@media only screen and (min-width: 730px) {
-			max-width: 85%;
-		}
-
-		@media only screen and (min-width: 910px) {
-			max-width: 80%;
-		}
-
-		@media only screen and (min-width: $responsive3) {
-			max-width: 100%;
-		}
-	}
-
-	.widget-title {
-		font-size: 1.5em;
-		margin-bottom: 0.6em;
-	}
-
-	.featured_post {
-		margin: 1% 2.25%;
-		max-width: 45%;
-		float: left;
-
-		.featured_image {
-		}
-
-		.featured_pic {
-			border: 2px solid $lightgray;
-		}
-
+.widget_search {
+	.search-submit {
+		@include hide();
 	}
 }
 
-.widget_mailchimpsf_widget,
-.mimi-form {
-	background-color: $budarkred;
+.widget_categories,
+.widget_archive {
+	select {
+		margin: 0;
+	}
 }

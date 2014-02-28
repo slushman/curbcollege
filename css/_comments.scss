@@ -6,10 +6,7 @@
 
 	.comment {
 		margin: 2em 0 0;
-		padding: 1em;
-		border: 1px solid $medgray;
-
-		.comment-body {}
+		padding: 1em 0.25em 1em 1em;
 
 		.comment-content {
 
@@ -35,26 +32,8 @@
 		}
 	}
 
-	.alt {}
-
-	.odd {
-
-	}
-
 	.even {
 		background-color: $lightgray;
-	}
-
-	.thread-alt {}
-	.thread-even {}
-	.thread-odd {}
-
-	li {
-		.children {
-			.alt {}
-			.odd {}
-			.even {}
-		}
 	}
 
 	.vcard {
@@ -63,8 +42,6 @@
 			margin: 0 0.5em;
 			float: left;
 			font-style: normal;
-
-			a.url {}
 		}
 		.says {
 			float: left;
@@ -76,13 +53,10 @@
 			float: left;
 			width: 60px;
 		}
-
 	}
 
 	.comment-meta {
 		overflow: hidden;
-
-		a {}
 	}
 
 	.comment-metadata {
@@ -95,10 +69,6 @@
 		}
 	}
 
-	.parent {}
-	.children {}
-	.pingback {}
-
 	.bypostauthor,
 	li ul.children li.bypostauthor {
 		background-color: $budarkred;
@@ -109,30 +79,7 @@
 		}
 	}
 	
-	.comment-author {}
-	.comment-author-admin {}
-
-	li {
-
-		p{}
-		ul {}
-		ul.children {
-
-			li {}
-			li.alt {}
-			li.byuser {}
-			li.comment {}
-			li.comment-author-admin {}
-		}
+	.comment-respond {
+		margin: 2em 0 0;
 	}
 }
-
-#cancel-comment-reply {
-
-	a{}
-}
-
-.comment-respond {
-	margin: 2em 0 0;
-}
-

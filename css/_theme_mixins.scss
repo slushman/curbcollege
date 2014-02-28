@@ -29,3 +29,14 @@
         font-size: 1.25em;
     }
 }
+
+@mixin page_bgs() {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    left: 0;
+    display: block;
+}

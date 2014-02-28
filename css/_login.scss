@@ -1,0 +1,10 @@
+/* =Login Page
+----------------------------------------------- */
+
+body.login {
+	background: $budarkgray;
+
+	h1 a {
+		@include imagebg( $vertlogo );
+	}
+}

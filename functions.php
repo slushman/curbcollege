@@ -148,7 +148,6 @@ function my_register_nav_menus() {
 
 
 
-
 /**
  * Customize footer
  */
@@ -172,3 +171,43 @@ function slushman_credits() {
 
 } // End of slushman_credits()
 add_action( 'site_credits', 'slushman_credits' );
+
+
+
+/**
+ * Customize login page
+ */
+function curbcollege_login() { ?>
+    <style type="text/css">
+    	body.login {
+    		background: #383737;
+    	}
+    	body.login div#login {
+    		padding-top: 4%;
+    	}
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/vertical_logo.png);
+            background-size: 200px 200px;
+            height: 200px;
+            width: 200px;
+            padding-bottom: 30px;
+        }
+        body.login .button-primary {
+        	background: #c9262d;
+        	border-color: #b0151c;
+        }
+        body.login .button-primary:hover {
+        	background: #b0151c;
+        	border-color: #c9262d;
+        }
+        .login #nav a, 
+        .login #backtoblog a {
+        	color: #ffffff;
+        }
+        .login #nav a:hover, 
+        .login #backtoblog a:hover {
+        	color: #b0151c;
+        }
+    </style>
+<?php } // End of curbcollege_login()
+add_action( 'login_enqueue_scripts', 'curbcollege_login' );

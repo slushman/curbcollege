@@ -24,7 +24,7 @@ $responsive4: 1100px;
 $light: #ffffff;
 $dark: #000000;
 $medgray: #24272f;
-$lightgray: #a9a8a9;
+$lightgray: #cccccc;
 
 $budarkgray: #383737;
 $bured: #c9262d;
@@ -41,10 +41,10 @@ $giga: $fontsize*6;
 $mega: $fontsize*5;
 $kilo: $fontsize*4;
 
-$h1: $fontsize*3;
-$h2: $fontsize*2.5;
-$h3: $fontsize*2;
-$h4: $fontsize*1.5;
+$h1: $fontsize*2.75;
+$h2: $fontsize*2.25;
+$h3: $fontsize*1.75;
+$h4: $fontsize*1.25;
 $h5: $fontsize;
 $h6: $fontsize*0.875;
 
@@ -60,3 +60,4 @@ $socials: 30px;
 
 /* Backgrounds */
 $headerbg: "images/logo.png";
+$vertlogo: "images/vertical_logo.png";

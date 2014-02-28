@@ -2,62 +2,61 @@
 /**
  * @package curbcollege
  */
-?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+?><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1><?php
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php curbcollege_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		if ( 'post' == get_post_type() ) :
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'curbcollege' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'curbcollege' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
-
-	<footer class="entry-meta">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
+		?><div class="entry-meta">
+		
+			<span class="entry-cats"><?php
+			
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'curbcollege' ) );
-				if ( $categories_list && curbcollege_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'curbcollege' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
+				$category_list = get_the_category_list( __( ', ', 'curbcollege' ) );
 
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'curbcollege' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'curbcollege' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
+				$meta_text = __( 'File under: %1$s', 'curbcollege' );
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'curbcollege' ), __( '1 Comment', 'curbcollege' ), __( '% Comments', 'curbcollege' ) ); ?></span>
-		<?php endif; ?>
+				printf(
+					$meta_text,
+					$category_list
+				);
 
-		<?php edit_post_link( __( 'Edit', 'curbcollege' ), '<span class="edit-link">', '</span>' ); ?>
+			?></span><?php
+
+				curbcollege_posted_on();
+		
+		?></div><!-- .entry-meta --><?php
+		
+		endif;
+	
+	?></header><!-- .entry-header --><?php
+
+	if ( is_search() ) : // Only display Excerpts for Search
+
+	?><div class="entry-summary"><?php
+
+		the_excerpt();
+	
+	?></div><!-- .entry-summary --><?php
+	
+	else :
+	
+	?><div class="entry-content"><?php
+		
+		the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'curbcollege' ) );
+
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'curbcollege' ),
+			'after'  => '</div>',
+		) );
+
+	?></div><!-- .entry-content --><?php
+	
+	endif;
+
+	?><footer class="entry-meta">
+
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

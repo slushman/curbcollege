@@ -22,9 +22,9 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
+	background: $budarkred;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 5px 10px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: $light;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	font-size: 12px;
@@ -39,6 +39,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa #bbb;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+
 }
 button:focus,
 html input[type="button"]:focus,
@@ -54,7 +55,7 @@ input[type="submit"]:active {
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
-	margin-left: 1em;
+	margin: 0 0 0 1em;
 
 	@include boxsize( border-box ); /* Addresses box sizing set to content-box in IE8/9 */
 }
@@ -82,7 +83,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	padding: .5em;
-
+	display: block;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -99,8 +100,76 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 98%;
 }
+select {
+	display: block;
+}
 
 .form_title {
 	font-size: 2.5em;
 	margin: 1em 0;
 }
+
+
+/**
+ * Freedback forms
+ */
+form {
+
+	div {
+		height: 0;
+	}
+
+	table {
+
+		tr {
+
+			th,
+			td {
+				vertical-align: top;
+
+				input[type="submit"] {
+					margin-top: 1.5em;
+				}
+
+				input[type="checkbox"],
+				input[type="radio"] {
+					margin-bottom: 1.5em;
+				}
+
+				#field-d4c4c30d6ab22b8_0 {
+					margin-bottom: 0;
+				}
+
+				@media all and (min-width: $responsive2) {
+					&:nth-child(1) {
+						text-align: right;
+						padding-right: $vspacing;
+					}					
+				}
+
+				@media all and (max-width: $responsive2) {
+					display: block;
+					width: 100%;
+
+					input {
+						width: 100%;
+					}
+
+					input[type="checkbox"],
+					input[type="radio"] {
+						width: auto;
+					}
+
+					input[type="submit"] {
+						margin-top: 1.5em;
+					}
+
+					&:nth-child(2) {
+						margin-bottom: $vspacing;
+					}
+				}
+			}
+		}
+	}
+}
+

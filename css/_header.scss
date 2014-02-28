@@ -2,13 +2,22 @@
 ----------------------------------------------- */
 
 .site-header {
-	padding: 0.5em;
+	
+	@media all and (min-width: $responsive1) {
+		padding: 0.75em;
+		margin-bottom: $vspacing;
+	}
 
 	.site-branding {
 		margin: 0 auto;
-		height: 80px;
+		height: 15em;
 
-		@include imagebg ( $headerbg, "", no-repeat, center, center, contain );
+		@include imagebg ( $vertlogo, "", no-repeat, center, center, contain );
+
+		@media all and (min-width: $responsive1) {
+			height: 80px;
+			@include imagebg ( $headerbg, "", no-repeat, center, center, contain );
+		}
 
 		.site-title {
 			@include hide();

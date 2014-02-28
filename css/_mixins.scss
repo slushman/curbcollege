@@ -219,7 +219,7 @@
     border-bottom-left-radius:  $botleft;
 }
 
-@mixin shadow( $x, $y, $blur, $spread, $color: #333333, $type: "" ) {
+@mixin shadow( $x, $y, $blur, $spread, $color: #333333, $type: inset ) {
     -moz-box-shadow: $x $y $blur $spread $color $type;
     -webkit-box-shadow: $x $y $blur $spread $color $type;
     box-shadow: $x $y $blur $spread $color $type;

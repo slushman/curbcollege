@@ -17,12 +17,24 @@ h1,
 	font-size: $h1;
 
 	@include headers();
+
+	font-weight: bold;
+	line-height: 1em;
+	font-family: museo_slab500;
+
+	@media all and (max-width: $responsive1) {
+		font-size: $h2;
+	}
 }
 h2,
 .h2 {
 	font-size: $h2;
 
 	@include headers();
+
+	font-weight: bold;
+	line-height: 1em;
+	font-family: museo_slab500;
 }
 h3,
 .h3 {
@@ -94,11 +106,13 @@ del,
 strike {
 	color: $budarkred;
 }
-blockquote,
-q {
+blockquote {
 	margin: 0 $vspacing;
 	quotes: "\“" "\”" "‘" "’";
 	margin-bottom: $vspacing;
+}
+q {
+	quotes: "\“" "\”" "‘" "’";
 }
 blockquote:before,
 q:before {
@@ -131,8 +145,12 @@ pre {
 code, 
 kbd, 
 tt, 
-var {
+var,
+samp {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+var {
+	font-style: italic;
 }
 abbr, 
 acronym {
@@ -144,6 +162,7 @@ ins {
 	background: $budarkgray;
 	text-decoration: none;
 	color: white;
+	padding: 0 0.25em;
 }
 sup,
 sub {
